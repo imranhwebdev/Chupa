@@ -28,13 +28,13 @@ h6 {
 };
 
 h1{
-    @include font-70;
+    @include font-110;
 }
 h2{
-    @include font-30;
+    @include font-50;
 }
 h3{
-    @include font-26; 
+    @include font-35; 
 }
 p {
     margin: 0;

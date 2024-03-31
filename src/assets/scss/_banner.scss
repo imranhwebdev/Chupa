@@ -1,21 +1,29 @@
 .banner{
     &-area{
         position: relative;
-        padding-top: 25px;
-        padding-bottom: 30px;
-        @include sm{
-            padding-top: 15px;
-            padding-bottom: 10px;
-        }
+        height: 100vh;
         .container{
             position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             & .herotopleftImg{
                 position: absolute;
                 left: 10px;
-                top:-30px;
+                top:calc(32% - 160px);
                 max-width: 160px;
                 z-index: 9999;
+                @include xl{
+                    top:calc(32% - 120px);
+                    max-width: 120px;
+                }
+                @include lg{
+                    top:calc(32% - 120px);
+                    max-width: 120px;
+                }
                 @include mmd{
+                    top:calc(25% - 80px);
                     max-width: 120px;
                     top:0px;
                 }
@@ -54,11 +62,13 @@
     }
     &-content{
         text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
         .banner-topImg{
             position: relative;
             display: inline-block;
             z-index: 1;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             @include sm{
                 margin-bottom: 0;
             }
@@ -95,6 +105,7 @@
             letter-spacing: 2.2px;
             text-transform: capitalize;
             margin: 0;
+            margin-bottom: 5px;
         }
         h3{
             letter-spacing: 0.52px;
@@ -103,24 +114,24 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; 
             margin-top: 0px;
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
         h2{
             letter-spacing: 0.8px;
             margin-top: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
         .btns{
             position: relative;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             @include ssm{
-                margin-bottom: 5px;
+                margin-bottom: 15px;
             }
             .workintImg{
                 position: absolute;
                 left: -115px;
-                top: 80%;
+                top: 90%;
                 transform: translateY(-50%);
                 margin: 0;
                 max-width: 70px;
@@ -133,6 +144,7 @@
             }
             .boxed-btn{
                 margin:0px 13.4px;
+                margin-bottom: 10px;
                 @include ssm{
                     margin-bottom: 10px;
                     min-width: 150px;

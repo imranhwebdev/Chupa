@@ -10,22 +10,22 @@
     font-family: "Passion One", sans-serif;
 }
 
-@mixin font-70{
-    font-size: 70px;
+@mixin font-110{
+    font-size: 110px;
     line-height: 120%;
     @include xl {
-        font-size: 60px;
+        font-size: 90px;
     }
     @include lg {
-        font-size: 54px;
+        font-size: 80px;
     }
     @include mmd {
-        font-size: 50px;
+        font-size: 70px;
     }
 }
 
-@mixin font-30 {
-    font-size: 30px;
+@mixin font-50 {
+    font-size: 50px;
     line-height: 120%;
     @include xl {
         font-size: 28px;
@@ -74,17 +74,17 @@
     }
 }
 
-@mixin font-26 {
-    font-size: 26px;
+@mixin font-35 {
+    font-size: 35px;
     line-height: 120%;
     @include lg {
-        font-size: 22px;
+        font-size: 28px;
     }
     @include md {
-        font-size: 20px;
+        font-size: 22px;
     }
     @include sm {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
