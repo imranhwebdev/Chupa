@@ -13,12 +13,18 @@
             position: relative;
             z-index: 99;
             pointer-events: none;
+            @include sm{
+                max-width: 50px;
+            }
         }
         .socials{
             position: relative;
             li{
                 display: inline-block;
                 margin-left: 24px;
+                @include sm{
+                    margin-left: 10px;
+                }
                 a{
                     display: flex;
                     justify-content: center;
@@ -40,6 +46,10 @@
                     &:hover svg path{
                         color: $white;
                         fill:$white !important
+                    }
+                    @include ssm{
+                        width: 32px;
+                        height: 32px;
                     }
                 } 
             }
