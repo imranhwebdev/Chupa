@@ -10,11 +10,11 @@
     font-family: "Passion One", sans-serif;
 }
 
-@mixin font-110{
-    font-size: 110px;
+@mixin font-140{
+    font-size: 140px;
     line-height: 120%;
     @include xl {
-        font-size: 90px;
+        font-size: 110px;
     }
     @include lg {
         font-size: 80px;

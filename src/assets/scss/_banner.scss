@@ -10,9 +10,9 @@
             justify-content: center;
             & .herotopleftImg{
                 position: absolute;
-                left: 10px;
-                top:calc(32% - 160px);
-                max-width: 160px;
+                left: 44px;
+                top: calc(45% - 256px);
+                max-width: 230px;
                 z-index: 9999;
                 @include xl{
                     top:calc(32% - 120px);
@@ -41,8 +41,8 @@
             & .commentLeft{
                 position: absolute;
                 left: 0;
-                top:32%;
-                max-width: 180px;
+                top:45%;
+                max-width: 300px;
                 transform: translateY(-50%);
                 z-index: 9999;
                 cursor: pointer;
@@ -77,8 +77,8 @@
                letter-spacing: 0.48px;
                color: $black;
                position: absolute;
-               top: -20px;
-               left: 10px;
+               top: -25px;
+               left: 50px;
                transform: rotate(-19.764deg);
                @include sm{
                 left: 10px;
@@ -89,7 +89,7 @@
                }
             }
             img{
-                max-width: 120px;
+                max-width: 220px;
                 @include mmd{
                     max-width: 100px;
                 }
@@ -130,11 +130,11 @@
             }
             .workintImg{
                 position: absolute;
-                left: -115px;
-                top: 90%;
-                transform: translateY(-50%);
+                left: -125px;
+                top: 50%;
                 margin: 0;
-                max-width: 70px;
+                max-width: 183px;
+                transform: translateY(-50%);
                 @include sm{
                     left: -10px;
                     top: auto;
