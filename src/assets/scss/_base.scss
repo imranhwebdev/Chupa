@@ -134,7 +134,7 @@ nav ul li {
     transform: translateY(-50%); 
     z-index: 99;
     cursor: pointer;   
-           
+    user-select: none;
     @include xl{
         top:45%;
         max-width: 250px;
@@ -157,6 +157,32 @@ nav ul li {
         top: 45%;
         margin: 0;
     }
+    
+    span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -10px;
+        margin-left: -10px;
+        font-size: 22px;
+        width: max-content;
+        @include xl{
+            font-size:20px;
+        }
+        @include lg{
+            font-size: 17px;
+        }
+        @include md{
+            font-size: 15px;
+        }
+        @include sm{
+            font-size: 14px;
+        }
+        @include ssm{
+            font-size: 12px;
+        }
+    }
 }
 .herotoprightImg{
     position: absolute;
@@ -164,7 +190,7 @@ nav ul li {
     top:calc(57% - 170px);
     max-width: 220px;
     transform: translateY(-50%); 
-    z-index: 99;
+    z-index: 1;
     cursor: pointer; 
           
     @include xl{

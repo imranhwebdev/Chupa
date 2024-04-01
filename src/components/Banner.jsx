@@ -98,18 +98,18 @@ export default function Banner() {
           <img src={herotopleftImg} alt="" />
         </figure>
         <figure className='commentLeft'>
-          <img src={commentLeft} alt="" />
+          <img src={commentLeft} alt="" /> <span>TOKENOMICS</span>
         </figure>
 
         <figure className='herotoprightImg'>
           <img src={herotoprightImg} alt="" />
         </figure>
         <figure className='commentRight' onClick={resetCanvas}>
-          <img src={commentRight} alt="" />
+          <img src={commentRight} alt="" /> <span>RESET DRAWING</span>
         </figure>
         <div className="banner-content">
             <div className="banner-topImg">
-                <p>Boi iz happy</p>
+                <p>Click To Draw</p>
                 <img src={bannerTopImg} alt="" />
             </div>
             <h1>$boi</h1>
