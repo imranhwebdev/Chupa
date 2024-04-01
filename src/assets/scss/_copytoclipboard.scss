@@ -1,25 +1,44 @@
 .copytoclipboard-inner {
     position: relative;
+    max-width: 730px;
+    margin-inline: auto;
     .copytoclipboard {
         position: relative;
         padding: 12px 24px;
         border-radius: 8px;
         border: 1px solid #B4B4B4;
         background: rgba(0, 0, 0, 0.02);
-        max-width: 581px;
+        max-width: 730px;
         margin-inline: auto;
         z-index: 99;
         @include sm{
+            width: 90%;
             padding: 10px 8px
         }
+        @include ssm{
+            width: 95%;
+            overflow: hidden;
+        }
         p {
-            @include font-18;
+            font-size: 25px;
             letter-spacing: 0.4px;
             text-transform: uppercase;
             @include passion-one;
             opacity: 0.8;
+            @include xl{
+                font-size: 23px;
+            }
+            @include lg{
+                font-size: 23px;
+            }
+            @include mmd{
+                font-size: 22px;
+            }
+            @include sm{
+                font-size: 18px;
+            }
             @include ssm{
-                font-size: 13px;
+                font-size: 14px;
             }
         }
         button {

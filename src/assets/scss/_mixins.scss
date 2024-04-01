@@ -28,16 +28,16 @@
     font-size: 50px;
     line-height: 120%;
     @include xl {
-        font-size: 28px;
+        font-size: 40px;
     }
     @include lg {
-        font-size: 25px;
+        font-size: 35px;
     }
     @include md {
-        font-size: 20px;
+        font-size: 30px;
     }
     @include sm {
-        font-size: 18px;
+        font-size: 30px;
     }
 }
 
