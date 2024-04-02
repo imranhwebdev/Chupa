@@ -213,3 +213,80 @@
         max-width: 130px;
     }
 }
+
+
+//for popup
+
+.ReactModalPortal {
+    position: relative;
+    z-index: 999999;
+    padding: 24px;
+    .ReactModal__Content {
+        border-radius: 10px;
+    }
+    & .closeBtn{
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        transition: .3s;
+        &::hover svg{
+            opacity: .3;
+        }
+    }
+    & .popup-content{
+        img{
+            max-width: 109px;
+        }
+    }
+    img{
+        max-width: 215px;
+    }
+
+    .popupRightImg {
+        position: absolute;
+        right: 37px;
+        bottom: 0;
+        max-width: 215px;
+        @include sm{
+            max-width: 160px;
+            right: 20px;
+        }
+        @include ssm{
+            max-width: 100px;
+        }
+    }
+    
+    .popup-content p {
+        max-width: 284px;
+        font-size: 18px;
+    }
+    
+    .popup-content {
+        width: 500px;
+        padding-top: 13px;
+        padding-left: 13px;
+        padding-bottom: 13px;
+        @include sm{
+            width: 350px;
+        }
+        @include ssm{
+            width: 300px;
+            padding-top: 8px;
+            padding-left: 8px;
+            padding-bottom: 8px;
+        }
+    }
+    
+    .popup-content h5 {
+        font-size: 20px;
+    }
+    
+    .popup-content img {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+}
+
