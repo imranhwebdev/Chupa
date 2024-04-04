@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import downloadImg from '../assets/img/downloadImg.png';
 import popupGalleryImg1 from "../assets/img/boi1.png";
 import popupGalleryImg2 from "../assets/img/boi2.png";
 import popupGalleryImg3 from "../assets/img/boi3.png";
@@ -39,26 +38,33 @@ export default function PopupGallery() {
     document.body.removeChild(link);
   };
 
+  const downloadImg = <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  <path d="M20 26.6667L11.6667 18.3333L14 15.9167L18.3333 20.25V6.66666H21.6667V20.25L26 15.9167L28.3333 18.3333L20 26.6667ZM10 33.3333C9.08334 33.3333 8.29889 33.0072 7.64667 32.355C6.99445 31.7028 6.66778 30.9178 6.66667 30V25H10V30H30V25H33.3333V30C33.3333 30.9167 33.0072 31.7017 32.355 32.355C31.7028 33.0083 30.9178 33.3344 30 33.3333H10Z" fill="#6A6A6A"/>
+</svg>;
+
   return (
-    <Swiper
-      slidesPerView={1}
-      spaceBetween={30}
-      loop={true}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[Navigation]}
-      className="popupgallery"
-    >
-      {popupGallery.map((item, index) => (
-        <SwiperSlide key={index}>
-          <img src={item.img} alt="" />
-          <div className="download-btn" onClick={() => handleDownload(item.img)}>
-            <img src={downloadImg} alt="" />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>    
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+            clickable: true,
+        }}
+        navigation={true}
+        modules={[Navigation]}
+        className="popupgallery"
+        >
+        {popupGallery.map((item, index) => (
+            <SwiperSlide key={index}>
+            <img src={item.img} alt="" />
+            <div className="download-btn" onClick={() => handleDownload(item.img)}>
+            {downloadImg}
+            </div>
+            </SwiperSlide>
+        ))}
+        </Swiper>
+    </>
+    
   );
 }

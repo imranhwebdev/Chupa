@@ -265,10 +265,11 @@
     }
     
     .popup-content {
-        width: 500px;
-        padding-top: 13px;
-        padding-left: 13px;
-        padding-bottom: 13px;
+        width: 520px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        background: #fff;
         @include sm{
             width: 350px;
         }
@@ -298,4 +299,5 @@
     width: 650px;
     padding: 0;
     text-align: center;
+    background: transparent;
 }
