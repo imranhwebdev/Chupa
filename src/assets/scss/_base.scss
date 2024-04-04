@@ -222,3 +222,28 @@ nav ul li {
         margin: 0;
     }
 }
+
+.popupgallery img {
+    margin: 0 !important;
+    max-width: 600px !important;
+}
+
+.swiper-button-prev:after {
+    content: url('/src/assets/img/arrowLeft.png');
+}
+.swiper-button-next:after{
+    content: url('/src/assets/img/arrowRight.png'); 
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open{
+    background: rgba(0, 0, 0, 0.40) !important;
+    backdrop-filter: blur(5px) !important;
+}
+.download-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 80px;
+    height: 80px;
+    z-index: 999;
+}

@@ -193,17 +193,20 @@ export default function Banner() {
         <img className='popupRightImg' src={popupRightImg} alt="" />
       </Modal>
 
-      <Modal
-        isOpen={galleryModalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeGalleryModal}
-        style={customStyles}
-        contentLabel="Gallery Modal"
-      >
-        <div className='popup-content'>
-          <PopupGallery />
-        </div>
-      </Modal>
+      <div className="popup__gallery">
+        <Modal
+          isOpen={galleryModalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeGalleryModal}
+          style={customStyles}
+          contentLabel="Gallery Modal"
+        >
+          <div className='popup-content gallery'>
+            <PopupGallery />
+          </div>
+        </Modal>
+      </div>
+     
     </>
   )
 }
