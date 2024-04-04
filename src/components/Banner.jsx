@@ -114,6 +114,15 @@ export default function Banner() {
     function closeModal() {
       setIsOpen(false);
     }
+
+    //gallery popup  
+    function openGallery() {
+      setIsOpen(true);
+    }
+  
+    function closeGallery() {
+      setIsOpen(false);
+    }
   return (
     <>
     <canvas
@@ -149,7 +158,7 @@ export default function Banner() {
                     <img src={workintImg} alt="" />
                 </figure>
                 <a href="#" className='boxed-btn'>BUY NOW</a>
-                <a target='_blank' href="https://drive.google.com/drive/folders/1fAW9CnAIFDf-vmUVxxrisrlmsecJZyE3" className='boxed-btn'>MEME GALLERY <img src={btnImg} alt="" /></a>
+                <a target='_blank' onClick={openGallery} className='boxed-btn'>MEME GALLERY <img src={btnImg} alt="" /></a>
             </div>
             <CopyToClipboard />
         </div>
@@ -182,6 +191,18 @@ export default function Banner() {
           <p>FOR COLLABORATIONS AND EXCHANGE LISTINGS - NO TEAM TOKEN</p>
         </div>
         <img className='popupRightImg' src={popupRightImg} alt="" />
+      </Modal>
+      
+    <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeGallery}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className='popup-content'>
+        imran
+        </div>
       </Modal>
     </>
   )
