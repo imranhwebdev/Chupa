@@ -258,6 +258,10 @@ nav ul li {
     &:hover{
         background-color: #6A6A6A;
     }
+    @include ssm{
+        top: 0 !important;
+        right: 0 !important;
+    }
 }
 .download-btn svg path{
     fill: #6A6A6A !important;

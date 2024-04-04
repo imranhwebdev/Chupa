@@ -300,4 +300,10 @@
     padding: 0;
     text-align: center;
     background: transparent;
+    @include sm{
+        width: 380px !important;
+    }
+    @include ssm{
+        width: 350px !important;
+    }
 }
