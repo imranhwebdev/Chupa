@@ -10,6 +10,7 @@ import commentRight from "../assets/img/comment-right.png";
 import heroBottomRightImg from "../assets/img/heroBottomRightImg.png";
 import CopyToClipboard from './CopyToClipboard';
 import tokenomicsTopImg from '../assets/img/tokenContentImg.png';
+import close from '../assets/img/close.png';
 import PopupGallery from './PopupGallery';
 
 const customStyles = {
@@ -203,6 +204,9 @@ export default function Banner() {
           style={customStyles}
           contentLabel="Gallery Modal"
         >
+          <button className='closeModal' onClick={closeGalleryModal}>
+            <img src={close} alt="" />
+          </button>
           <div className='popup-content gallery'>
             <PopupGallery />
           </div>
