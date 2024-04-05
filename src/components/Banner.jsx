@@ -189,8 +189,15 @@ export default function Banner() {
           <h5>10% MARKETING WALLET</h5>
           <img src={popuptoken} alt="" />
           <p>FOR COLLABORATIONS AND EXCHANGE LISTINGS - NO TEAM TOKEN</p>
-        </div>
+          
         <img className='popupRightImg' src={popupRightImg} alt="" />
+
+        
+        <div className="btns">
+              <a href="#" className='boxed-btn'>BUY NOW</a>
+              <a target='_blank' onClick={openGalleryModal} className='boxed-btn'>MEME GALLERY <img src={btnImg} alt="" /></a>
+            </div>
+        </div>
       </Modal>
 
       <div className="popup__gallery">
