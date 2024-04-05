@@ -247,7 +247,7 @@ nav ul li {
     cursor: pointer;
     position: absolute;
     top: 30px;
-    right: 200px;
+    right: 360px;
     width: 80px;
     height: 80px;
     z-index: 999;
@@ -302,7 +302,7 @@ nav ul li {
 }
 
 .popup-content.gallery {
-    width: 940px !important;
+    width: 1270px !important;
     @include md{
         width: 760px !important;
     }
@@ -316,7 +316,12 @@ nav ul li {
     right: 27px;
 }
 
-
+.swiper-slide img{
+    width: 620px !important;
+    &:hover{
+        opacity: 1 !important;
+    }
+}
 
 
 

@@ -36,8 +36,10 @@ export default function Banner() {
     const ctx = canvas.getContext('2d');
 
     // Set canvas size
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
     const startDrawing = (e) => {
       isDrawingRef.current = true;
@@ -75,22 +77,15 @@ export default function Banner() {
     canvas.addEventListener('mousemove', draw);
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mouseout', stopDrawing);
-
-    // Resize canvas with window
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
     window.addEventListener('resize', resizeCanvas);
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
       canvas.removeEventListener('mousedown', toggleDrawing);
       canvas.removeEventListener('mousemove', draw);
       canvas.removeEventListener('mouseup', stopDrawing);
       canvas.removeEventListener('mouseout', stopDrawing);
+      window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
 
@@ -170,19 +165,12 @@ export default function Banner() {
 
       <Modal
         isOpen={tokenModalIsOpen}
-        onAfterOpen={() => {}} // You can add any necessary logic here
         onRequestClose={closeTokenModal}
         style={customStyles}
         contentLabel="Token Modal"
       >
         <button className='closeBtn' onClick={closeTokenModal}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.5">
-              <circle cx="12" cy="12" r="11.5" stroke="black" />
-              <path d="M15.5472 15.9911C15.4889 15.9918 15.4312 15.9804 15.3777 15.9575C15.3242 15.9345 15.276 15.9007 15.2364 15.8581L8.13319 8.76275C7.9556 8.58537 7.9556 8.31042 8.13319 8.13304C8.31077 7.95565 8.58602 7.95565 8.7636 8.13304L15.8579 15.2372C16.0355 15.4146 16.0355 15.6896 15.8579 15.867C15.7691 15.9557 15.6537 16 15.5472 16V15.9911Z" fill="black" />
-              <path d="M8.44395 15.9911C8.38573 15.9918 8.328 15.9804 8.27448 15.9574C8.22095 15.9345 8.17283 15.9007 8.13319 15.8581C7.9556 15.6807 7.9556 15.4057 8.13319 15.2284L15.2364 8.14189C15.414 7.9645 15.6892 7.9645 15.8668 8.14189C16.0444 8.31927 16.0444 8.59422 15.8668 8.7716L8.75472 15.8581C8.66593 15.9468 8.5505 15.9911 8.44395 15.9911Z" fill="black" />
-            </g>
-          </svg>
+          <img src={close} alt="" />
         </button>
         <div className='popup-content'>
           <figure className="tokenContent-inner">
@@ -198,7 +186,6 @@ export default function Banner() {
 
       <Modal
         isOpen={galleryModalIsOpen}
-        onAfterOpen={() => {}} // You can add any necessary logic here
         onRequestClose={closeGalleryModal}
         style={customStyles}
         contentLabel="Gallery Modal"
@@ -213,7 +200,6 @@ export default function Banner() {
 
       <Modal
         isOpen={popupGalleryModalIsOpen}
-        onAfterOpen={() => {}} // You can add any necessary logic here
         onRequestClose={closePopupGallery}
         style={customStyles}
         contentLabel="Popup Gallery Modal"
@@ -226,5 +212,5 @@ export default function Banner() {
         </div>
       </Modal>
     </>
-  )
+  );
 }

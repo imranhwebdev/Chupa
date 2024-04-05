@@ -8,5 +8,10 @@
     flex: 0 0 auto;
     padding: 0;
     margin: 0;
-    width:10%;
+    width:120px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+        opacity: .8;
+    }
 }
