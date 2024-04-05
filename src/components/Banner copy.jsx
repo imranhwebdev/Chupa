@@ -102,24 +102,25 @@ export default function Banner() {
 
   const [tokenModalIsOpen, setTokenModalIsOpen] = useState(false);
   const [galleryModalIsOpen, setGalleryModalIsOpen] = useState(false);
-  const [popupGalleryModalIsOpen, setPopupGalleryModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
 
-  const openTokenModal = () => setTokenModalIsOpen(true);
-  const closeTokenModal = () => setTokenModalIsOpen(false);
-  const openGalleryModal = () => setGalleryModalIsOpen(true);
-  const closeGalleryModal = () => setGalleryModalIsOpen(false);
-  const closePopupGallery = () => setPopupGalleryModalIsOpen(false);
-
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
-    openPopupGallery();
+  const afterOpenModal = () => {
+    // Do nothing or define any necessary logic here
   };
 
-  const openPopupGallery = () => {
-    setGalleryModalIsOpen(false);
+  const openTokenModal = () => {
+    setTokenModalIsOpen(true);
+  };
+
+  const closeTokenModal = () => {
     setTokenModalIsOpen(false);
-    setPopupGalleryModalIsOpen(true);
+  };
+
+  const openGalleryModal = () => {
+    setGalleryModalIsOpen(true);
+  };
+
+  const closeGalleryModal = () => {
+    setGalleryModalIsOpen(false);
   };
 
   return (
@@ -170,7 +171,7 @@ export default function Banner() {
 
       <Modal
         isOpen={tokenModalIsOpen}
-        onAfterOpen={() => {}} // You can add any necessary logic here
+        onAfterOpen={afterOpenModal}
         onRequestClose={closeTokenModal}
         style={customStyles}
         contentLabel="Token Modal"
@@ -185,46 +186,35 @@ export default function Banner() {
           </svg>
         </button>
         <div className='popup-content'>
-          <figure className="tokenContent-inner">
-            <img className='popupRightImg' src={tokenomicsTopImg} alt="" />
-          </figure>
+            <figure className="tokenContent-inner">
+              <img className='popupRightImg' src={tokenomicsTopImg} alt="" />
+            </figure>
         
-          <div className="tokenModal btns">
-            <a href="#" className='boxed-btn'>BUY NOW</a>
-            <a target='_blank' onClick={openGalleryModal} className='boxed-btn'>MEME GALLERY <img src={btnImg} alt="" /></a>
+            <div className="tokenModal btns">
+              <a href="#" className='boxed-btn'>BUY NOW</a>
+              <a target='_blank' onClick={openGalleryModal} className='boxed-btn'>MEME GALLERY <img src={btnImg} alt="" /></a>
+            </div>
+        </div>
+      </Modal>
+
+      <div className="popup__gallery">
+        <Modal
+          isOpen={galleryModalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeGalleryModal}
+          style={customStyles}
+          contentLabel="Gallery Modal"
+        >
+          <button className='closeModal' onClick={closeGalleryModal}>
+            <img src={close} alt="" />
+          </button>
+          <div className='popup-content gallery'>
+            <PopupGallery />
+            <Gallery />
           </div>
-        </div>
-      </Modal>
-
-      <Modal
-        isOpen={galleryModalIsOpen}
-        onAfterOpen={() => {}} // You can add any necessary logic here
-        onRequestClose={closeGalleryModal}
-        style={customStyles}
-        contentLabel="Gallery Modal"
-      >
-        <button className='closeModal' onClick={closeGalleryModal}>
-          <img src={close} alt="" />
-        </button>
-        <div className='popup-content gallery'>
-          <Gallery onImageClick={handleImageClick} />
-        </div>
-      </Modal>
-
-      <Modal
-        isOpen={popupGalleryModalIsOpen}
-        onAfterOpen={() => {}} // You can add any necessary logic here
-        onRequestClose={closePopupGallery}
-        style={customStyles}
-        contentLabel="Popup Gallery Modal"
-      >
-        <button className='closeModal' onClick={closePopupGallery}>
-          <img src={close} alt="" />
-        </button>
-        <div className='popup-content gallery'>
-          <PopupGallery image={selectedImage} />
-        </div>
-      </Modal>
+        </Modal>
+      </div>
+     
     </>
   )
 }

@@ -138,6 +138,7 @@ export default function PopupGallery() {
             </SwiperSlide>
         ))}
         </Swiper>
+        
     </>
     
   );
