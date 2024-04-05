@@ -264,6 +264,8 @@
     padding-top: 20px;
     text-align: center;
     background: transparent;
+    height: 80vh;
+    overflow-y: scroll;
     @include sm{
         width: 380px !important;
     }

@@ -2,16 +2,29 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .gallery img  {
     flex: 0 0 auto;
     padding: 0;
     margin: 0;
-    width:120px;
+    width:160px;
     cursor: pointer;
     transition: all .3s ease-in-out;
     &:hover{
         opacity: .8;
+    }
+    @include lg{
+        width: 25%;
+    }
+    @include md{
+        width: 25%;
+    }
+    @include sm{
+        width: 32%;
+    }
+    @include ssm{
+        width: 46%;
     }
 }
