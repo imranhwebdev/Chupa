@@ -315,3 +315,45 @@ nav ul li {
 .swiper-button-next {
     right: 27px;
 }
+
+
+
+
+
+
+
+
+
+
+
+.tokenModal.btns {
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    padding-top: 39px;
+    @include sm{
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    a{
+        font-size: 37px;
+        @include sm{
+            font-size:18px;
+            padding: 12px 20px;
+        }
+    }
+}
+
+
+.tokenContent-inner {
+    margin: 0;
+    border-bottom: 4px solid #E6E6E6;
+    padding: 30px;
+    @include sm{
+        padding: 10px;
+        border-bottom: 2px solid #E6E6E6;
+    }
+}

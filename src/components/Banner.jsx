@@ -8,9 +8,8 @@ import herotoprightImg from "../assets/img/herotoprightImg.png";
 import commentLeft from "../assets/img/comment-left.png";
 import commentRight from "../assets/img/comment-right.png";
 import heroBottomRightImg from "../assets/img/heroBottomRightImg.png";
-import popuptoken from "../assets/img/popup-tokenImg.png";
 import CopyToClipboard from './CopyToClipboard';
-import popupRightImg from '../assets/img/popup-rightImg.png';
+import tokenomicsTopImg from '../assets/img/tokenContentImg.png';
 import PopupGallery from './PopupGallery';
 
 const customStyles = {
@@ -185,15 +184,11 @@ export default function Banner() {
           </svg>
         </button>
         <div className='popup-content'>
-          <h5>90% LP BURNT</h5>
-          <h5>10% MARKETING WALLET</h5>
-          <img src={popuptoken} alt="" />
-          <p>FOR COLLABORATIONS AND EXCHANGE LISTINGS - NO TEAM TOKEN</p>
-          
-        <img className='popupRightImg' src={popupRightImg} alt="" />
-
+            <figure className="tokenContent-inner">
+              <img className='popupRightImg' src={tokenomicsTopImg} alt="" />
+            </figure>
         
-        <div className="btns">
+            <div className="tokenModal btns">
               <a href="#" className='boxed-btn'>BUY NOW</a>
               <a target='_blank' onClick={openGalleryModal} className='boxed-btn'>MEME GALLERY <img src={btnImg} alt="" /></a>
             </div>
