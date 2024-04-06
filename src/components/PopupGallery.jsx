@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
@@ -51,95 +50,162 @@ import popupGalleryImg44 from "../assets/img/boi46.png";
 import popupGalleryImg45 from "../assets/img/boi47.png";
 import popupGalleryImg46 from "../assets/img/boi48.png";
 import popupGalleryImg47 from "../assets/img/boi49.png";
+import popupGalleryImg48 from "../assets/img/boi50.png";
+import popupGalleryImg49 from "../assets/img/boi51.png";
+import popupGalleryImg50 from "../assets/img/boi52.png";
+import popupGalleryImg51 from "../assets/img/boi53.png";
+import popupGalleryImg52 from "../assets/img/boi54.png";
+import popupGalleryImg53 from "../assets/img/boi55.png";
+import popupGalleryImg54 from "../assets/img/boi56.png";
+import popupGalleryImg55 from "../assets/img/boi57.png";
+import popupGalleryImg56 from "../assets/img/boi58.png";
+import popupGalleryImg57 from "../assets/img/boi59.png";
+import popupGalleryImg58 from "../assets/img/boi60.png";
+import popupGalleryImg59 from "../assets/img/boi61.png";
+import popupGalleryImg60 from "../assets/img/boi62.png";
+import popupGalleryImg61 from "../assets/img/boi63.png";
+import popupGalleryImg62 from "../assets/img/boi64.png";
+import popupGalleryImg63 from "../assets/img/boi65.png";
+import popupGalleryImg64 from "../assets/img/boi66.png";
+import popupGalleryImg65 from "../assets/img/boi67.png";
+import popupGalleryImg66 from "../assets/img/boi68.png";
+import popupGalleryImg67 from "../assets/img/boi69.png";
+import popupGalleryImg68 from "../assets/img/boi70.png";
+import popupGalleryImg69 from "../assets/img/boi71.png";
+import popupGalleryImg70 from "../assets/img/boi72.png";
+import popupGalleryImg71 from "../assets/img/boi73.png";
+import popupGalleryImg72 from "../assets/img/boi74.png";
+import popupGalleryImg73 from "../assets/img/boi75.png";
 
 export default function PopupGallery() {
   const popupGallery = [
     { img: popupGalleryImg1 },
-    { img: popupGalleryImg2 },
-    { img: popupGalleryImg3 },
-    { img: popupGalleryImg4 },
-    { img: popupGalleryImg5 },
-    { img: popupGalleryImg6 },
-    { img: popupGalleryImg7 },
-    { img: popupGalleryImg8 },
-    { img: popupGalleryImg9 },
-    { img: popupGalleryImg10 },
-    { img: popupGalleryImg11 },
-    { img: popupGalleryImg12 },
-    { img: popupGalleryImg13 },
-    { img: popupGalleryImg14 },
-    { img: popupGalleryImg15 },
-    { img: popupGalleryImg16 },
-    { img: popupGalleryImg17 },
-    { img: popupGalleryImg18 },
-    { img: popupGalleryImg19 },
-    { img: popupGalleryImg20 },
-    { img: popupGalleryImg21 },
-    { img: popupGalleryImg22 },
-    { img: popupGalleryImg23 },
-    { img: popupGalleryImg24 },
-    { img: popupGalleryImg25 },
-    { img: popupGalleryImg26 },
-    { img: popupGalleryImg27 },
-    { img: popupGalleryImg28 },
-    { img: popupGalleryImg29 },
-    { img: popupGalleryImg30 },
-    { img: popupGalleryImg31 },
-    { img: popupGalleryImg32 },
-    { img: popupGalleryImg33 },
-    { img: popupGalleryImg34 },
-    { img: popupGalleryImg35 },
-    { img: popupGalleryImg36 },
-    { img: popupGalleryImg37 },
-    { img: popupGalleryImg38 },
-    { img: popupGalleryImg39 },
-    { img: popupGalleryImg40 },
-    { img: popupGalleryImg41 },
-    { img: popupGalleryImg42 },
-    { img: popupGalleryImg43 },
-    { img: popupGalleryImg44 },
-    { img: popupGalleryImg45 },
-    { img: popupGalleryImg46 },
-    { img: popupGalleryImg47 },
+        { img: popupGalleryImg2 },
+        { img: popupGalleryImg3 },
+        { img: popupGalleryImg4 },
+        { img: popupGalleryImg5 },
+        { img: popupGalleryImg6 },
+        { img: popupGalleryImg7 },
+        { img: popupGalleryImg8 },
+        { img: popupGalleryImg9 },
+        { img: popupGalleryImg10 },
+        { img: popupGalleryImg11 },
+        { img: popupGalleryImg12 },
+        { img: popupGalleryImg13 },
+        { img: popupGalleryImg14 },
+        { img: popupGalleryImg15 },
+        { img: popupGalleryImg16 },
+        { img: popupGalleryImg17 },
+        { img: popupGalleryImg18 },
+        { img: popupGalleryImg19 },
+        { img: popupGalleryImg20 },
+        { img: popupGalleryImg21 },
+        { img: popupGalleryImg22 },
+        { img: popupGalleryImg23 },
+        { img: popupGalleryImg24 },
+        { img: popupGalleryImg25 },
+        { img: popupGalleryImg26 },
+        { img: popupGalleryImg27 },
+        { img: popupGalleryImg28 },
+        { img: popupGalleryImg29 },
+        { img: popupGalleryImg30 },
+        { img: popupGalleryImg31 },
+        { img: popupGalleryImg32 },
+        { img: popupGalleryImg33 },
+        { img: popupGalleryImg34 },
+        { img: popupGalleryImg35 },
+        { img: popupGalleryImg36 },
+        { img: popupGalleryImg37 },
+        { img: popupGalleryImg38 },
+        { img: popupGalleryImg39 },
+        { img: popupGalleryImg40 },
+        { img: popupGalleryImg41 },
+        { img: popupGalleryImg42 },
+        { img: popupGalleryImg43 },
+        { img: popupGalleryImg44 },
+        { img: popupGalleryImg45 },
+        { img: popupGalleryImg46 },
+        { img: popupGalleryImg47 },
+        { img: popupGalleryImg48 },
+        { img: popupGalleryImg49 },
+        { img: popupGalleryImg50 },
+        { img: popupGalleryImg51 },
+        { img: popupGalleryImg52 },
+        { img: popupGalleryImg53 },
+        { img: popupGalleryImg54 },
+        { img: popupGalleryImg55 },
+        { img: popupGalleryImg56 },
+        { img: popupGalleryImg57 },
+        { img: popupGalleryImg58 },
+        { img: popupGalleryImg59 },
+        { img: popupGalleryImg60 },
+        { img: popupGalleryImg61 },
+        { img: popupGalleryImg62 },
+        { img: popupGalleryImg63 },
+        { img: popupGalleryImg64 },
+        { img: popupGalleryImg65 },
+        { img: popupGalleryImg66 },
+        { img: popupGalleryImg67 },
+        { img: popupGalleryImg68 },
+        { img: popupGalleryImg69 },
+        { img: popupGalleryImg70 },
+        { img: popupGalleryImg71 },
+        { img: popupGalleryImg72 },
+        { img: popupGalleryImg73 },
   ];
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (imageUrl) => {
+    setSelectedImage(imageUrl);
+  };
 
   const handleDownload = (imageUrl) => {
     const link = document.createElement('a');
     link.href = imageUrl;
-    link.download = 'image.png'; // Change the filename if needed
+    link.download = 'image.png';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
-  const downloadImg = <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-  <path d="M20 26.6667L11.6667 18.3333L14 15.9167L18.3333 20.25V6.66666H21.6667V20.25L26 15.9167L28.3333 18.3333L20 26.6667ZM10 33.3333C9.08334 33.3333 8.29889 33.0072 7.64667 32.355C6.99445 31.7028 6.66778 30.9178 6.66667 30V25H10V30H30V25H33.3333V30C33.3333 30.9167 33.0072 31.7017 32.355 32.355C31.7028 33.0083 30.9178 33.3344 30 33.3333H10Z" fill="#6A6A6A"/>
-</svg>;
+  const downloadImg = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M20 26.6667L11.6667 18.3333L14 15.9167L18.3333 20.25V6.66666H21.6667V20.25L26 15.9167L28.3333 18.3333L20 26.6667ZM10 33.3333C9.08334 33.3333 8.29889 33.0072 7.64667 32.355C6.99445 31.7028 6.66778 30.9178 6.66667 30V25H10V30H30V25H33.3333V30C33.3333 30.9167 33.0072 31.7017 32.355 32.355C31.7028 33.0083 30.9178 33.3344 30 33.3333H10Z" fill="#6A6A6A"/>
+    </svg>
+  );
 
   return (
     <>    
-        <Swiper
+      <Swiper
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
         pagination={{
-            clickable: true,
+          clickable: true,
         }}
         navigation={true}
         modules={[Navigation]}
         className="popupgallery"
-        >
+      >
         {popupGallery.map((item, index) => (
-            <SwiperSlide key={index}>
-            <img src={item.img} alt="" />
+          <SwiperSlide key={index}>
+            <img src={item.img} alt="" onClick={() => handleImageClick(item.img)} />
             <div className="download-btn" onClick={() => handleDownload(item.img)}>
-            {downloadImg}
+              {downloadImg}
             </div>
-            </SwiperSlide>
+          </SwiperSlide>
         ))}
-        </Swiper>
-        
+      </Swiper>
+      {/* Popup for displaying the selected image */}
+      {selectedImage && (
+        <div className="popup">
+          <div className="popup-inner">
+            <img src={selectedImage} alt="" />
+            <button onClick={() => setSelectedImage(null)}>Close</button>
+          </div>
+        </div>
+      )}
     </>
-    
   );
 }

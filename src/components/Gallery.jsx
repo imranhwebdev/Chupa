@@ -46,56 +46,108 @@ import popupGalleryImg44 from "../assets/img/boi46.png";
 import popupGalleryImg45 from "../assets/img/boi47.png";
 import popupGalleryImg46 from "../assets/img/boi48.png";
 import popupGalleryImg47 from "../assets/img/boi49.png";
+import popupGalleryImg48 from "../assets/img/boi50.png";
+import popupGalleryImg49 from "../assets/img/boi51.png";
+import popupGalleryImg50 from "../assets/img/boi52.png";
+import popupGalleryImg51 from "../assets/img/boi53.png";
+import popupGalleryImg52 from "../assets/img/boi54.png";
+import popupGalleryImg53 from "../assets/img/boi55.png";
+import popupGalleryImg54 from "../assets/img/boi56.png";
+import popupGalleryImg55 from "../assets/img/boi57.png";
+import popupGalleryImg56 from "../assets/img/boi58.png";
+import popupGalleryImg57 from "../assets/img/boi59.png";
+import popupGalleryImg58 from "../assets/img/boi60.png";
+import popupGalleryImg59 from "../assets/img/boi61.png";
+import popupGalleryImg60 from "../assets/img/boi62.png";
+import popupGalleryImg61 from "../assets/img/boi63.png";
+import popupGalleryImg62 from "../assets/img/boi64.png";
+import popupGalleryImg63 from "../assets/img/boi65.png";
+import popupGalleryImg64 from "../assets/img/boi66.png";
+import popupGalleryImg65 from "../assets/img/boi67.png";
+import popupGalleryImg66 from "../assets/img/boi68.png";
+import popupGalleryImg67 from "../assets/img/boi69.png";
+import popupGalleryImg68 from "../assets/img/boi70.png";
+import popupGalleryImg69 from "../assets/img/boi71.png";
+import popupGalleryImg70 from "../assets/img/boi72.png";
+import popupGalleryImg71 from "../assets/img/boi73.png";
+import popupGalleryImg72 from "../assets/img/boi74.png";
+import popupGalleryImg73 from "../assets/img/boi75.png";
 
 const Gallery = ({ onImageClick }) => {
     const images = [
-        { img: popupGalleryImg1 },
-        { img: popupGalleryImg2 },
-        { img: popupGalleryImg3 },
-        { img: popupGalleryImg4 },
-        { img: popupGalleryImg5 },
-        { img: popupGalleryImg6 },
-        { img: popupGalleryImg7 },
-        { img: popupGalleryImg8 },
-        { img: popupGalleryImg9 },
-        { img: popupGalleryImg10 },
-        { img: popupGalleryImg11 },
-        { img: popupGalleryImg12 },
-        { img: popupGalleryImg13 },
-        { img: popupGalleryImg14 },
-        { img: popupGalleryImg15 },
-        { img: popupGalleryImg16 },
-        { img: popupGalleryImg17 },
-        { img: popupGalleryImg18 },
-        { img: popupGalleryImg19 },
-        { img: popupGalleryImg20 },
-        { img: popupGalleryImg21 },
-        { img: popupGalleryImg22 },
-        { img: popupGalleryImg23 },
-        { img: popupGalleryImg24 },
-        { img: popupGalleryImg25 },
-        { img: popupGalleryImg26 },
-        { img: popupGalleryImg27 },
-        { img: popupGalleryImg28 },
-        { img: popupGalleryImg29 },
-        { img: popupGalleryImg30 },
-        { img: popupGalleryImg31 },
-        { img: popupGalleryImg32 },
-        { img: popupGalleryImg33 },
-        { img: popupGalleryImg34 },
-        { img: popupGalleryImg35 },
-        { img: popupGalleryImg36 },
-        { img: popupGalleryImg37 },
-        { img: popupGalleryImg38 },
-        { img: popupGalleryImg39 },
-        { img: popupGalleryImg40 },
-        { img: popupGalleryImg41 },
-        { img: popupGalleryImg42 },
-        { img: popupGalleryImg43 },
-        { img: popupGalleryImg44 },
-        { img: popupGalleryImg45 },
-        { img: popupGalleryImg46 },
-        { img: popupGalleryImg47 },
+      { img: popupGalleryImg1 },
+      { img: popupGalleryImg2 },
+      { img: popupGalleryImg3 },
+      { img: popupGalleryImg4 },
+      { img: popupGalleryImg5 },
+      { img: popupGalleryImg6 },
+      { img: popupGalleryImg7 },
+      { img: popupGalleryImg8 },
+      { img: popupGalleryImg9 },
+      { img: popupGalleryImg10 },
+      { img: popupGalleryImg11 },
+      { img: popupGalleryImg12 },
+      { img: popupGalleryImg13 },
+      { img: popupGalleryImg14 },
+      { img: popupGalleryImg15 },
+      { img: popupGalleryImg16 },
+      { img: popupGalleryImg17 },
+      { img: popupGalleryImg18 },
+      { img: popupGalleryImg19 },
+      { img: popupGalleryImg20 },
+      { img: popupGalleryImg21 },
+      { img: popupGalleryImg22 },
+      { img: popupGalleryImg23 },
+      { img: popupGalleryImg24 },
+      { img: popupGalleryImg25 },
+      { img: popupGalleryImg26 },
+      { img: popupGalleryImg27 },
+      { img: popupGalleryImg28 },
+      { img: popupGalleryImg29 },
+      { img: popupGalleryImg30 },
+      { img: popupGalleryImg31 },
+      { img: popupGalleryImg32 },
+      { img: popupGalleryImg33 },
+      { img: popupGalleryImg34 },
+      { img: popupGalleryImg35 },
+      { img: popupGalleryImg36 },
+      { img: popupGalleryImg37 },
+      { img: popupGalleryImg38 },
+      { img: popupGalleryImg39 },
+      { img: popupGalleryImg40 },
+      { img: popupGalleryImg41 },
+      { img: popupGalleryImg42 },
+      { img: popupGalleryImg43 },
+      { img: popupGalleryImg44 },
+      { img: popupGalleryImg45 },
+      { img: popupGalleryImg46 },
+      { img: popupGalleryImg47 },
+      { img: popupGalleryImg48 },
+      { img: popupGalleryImg49 },
+      { img: popupGalleryImg50 },
+      { img: popupGalleryImg51 },
+      { img: popupGalleryImg52 },
+      { img: popupGalleryImg53 },
+      { img: popupGalleryImg54 },
+      { img: popupGalleryImg55 },
+      { img: popupGalleryImg56 },
+      { img: popupGalleryImg57 },
+      { img: popupGalleryImg58 },
+      { img: popupGalleryImg59 },
+      { img: popupGalleryImg60 },
+      { img: popupGalleryImg61 },
+      { img: popupGalleryImg62 },
+      { img: popupGalleryImg63 },
+      { img: popupGalleryImg64 },
+      { img: popupGalleryImg65 },
+      { img: popupGalleryImg66 },
+      { img: popupGalleryImg67 },
+      { img: popupGalleryImg68 },
+      { img: popupGalleryImg69 },
+      { img: popupGalleryImg70 },
+      { img: popupGalleryImg71 },
+      { img: popupGalleryImg72 },
+      { img: popupGalleryImg73 },
       ];
   return (
     <div className="gallery">
