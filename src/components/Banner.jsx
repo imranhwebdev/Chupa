@@ -36,10 +36,8 @@ export default function Banner() {
     const ctx = canvas.getContext('2d');
 
     // Set canvas size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     const startDrawing = (e) => {
       isDrawingRef.current = true;
@@ -77,15 +75,22 @@ export default function Banner() {
     canvas.addEventListener('mousemove', draw);
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mouseout', stopDrawing);
+
+    // Resize canvas with window
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
     window.addEventListener('resize', resizeCanvas);
 
     // Cleanup
     return () => {
+      window.removeEventListener('resize', resizeCanvas);
       canvas.removeEventListener('mousedown', toggleDrawing);
       canvas.removeEventListener('mousemove', draw);
       canvas.removeEventListener('mouseup', stopDrawing);
       canvas.removeEventListener('mouseout', stopDrawing);
-      window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
 
@@ -94,7 +99,7 @@ export default function Banner() {
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   };
-
+  
   const [tokenModalIsOpen, setTokenModalIsOpen] = useState(false);
   const [galleryModalIsOpen, setGalleryModalIsOpen] = useState(false);
   const [popupGalleryModalIsOpen, setPopupGalleryModalIsOpen] = useState(false);

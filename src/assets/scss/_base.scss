@@ -293,10 +293,10 @@ nav ul li {
   .custom-next-button {
     position: absolute;
     top: 50%;
-    right: 10px; /* Adjust the distance from the right as needed */
+    right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
-    z-index: 999; /* Ensure it's above the Swiper */
+    z-index: 999;
   }
   .ReactModal__Content.ReactModal__Content--after-open {
     padding: 0 !important;
@@ -341,13 +341,6 @@ nav ul li {
         width:250px !important
     }       
 }
-
-
-
-
-
-
-
 
 
 .tokenModal.btns {
