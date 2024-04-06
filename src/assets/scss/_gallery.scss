@@ -16,15 +16,15 @@
         opacity: .8;
     }
     @include lg{
-        width: 25%;
+        width: 15%;
     }
     @include md{
-        width: 25%;
+        width: 15%;
     }
     @include sm{
-        width: 32%;
+        width: 20%;
     }
     @include ssm{
-        width: 46%;
+        width: 45%;
     }
 }

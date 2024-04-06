@@ -122,7 +122,7 @@ nav ul li {
     top: 0;
     left: 0;
     width: 100vw;
-    height: auto;
+    height: 100%;
     z-index: 9;
 }
 
@@ -262,15 +262,19 @@ nav ul li {
     &:hover{
         background-color: #6A6A6A;
     }
+    @include lg{
+        top: 30px;
+        right: 130px;
+    }
     @include mmd{
         top: 30px;
-        right: 113px;
+        right: 150px;
     }
     @include sm{
         width: 60px;
         height: 60px;
-        top: 5px !important;
-        right: 5px !important;
+        top: 2px !important;
+        right: 52px !important;
     }
 }
 .download-btn svg path{
@@ -303,6 +307,9 @@ nav ul li {
 
 .popup-content.gallery {
     width: 1270px !important;
+    @include lg{
+        width: 760px !important;
+    }
     @include md{
         width: 760px !important;
     }
@@ -321,6 +328,18 @@ nav ul li {
     &:hover{
         opacity: 1 !important;
     }
+    @include lg{
+        width:550px !important
+    }
+    @include md{
+        width:500px !important
+    }
+    @include sm{
+        width:280px !important
+    } 
+    @include ssm{
+        width:250px !important
+    }       
 }
 
 
@@ -364,7 +383,7 @@ nav ul li {
 }
 
 .closeModal {
-    margin-left: 48%;
+    margin-left: calc(50% - 30px);
     cursor: pointer;
     border: 0;
     background-color: transparent;
