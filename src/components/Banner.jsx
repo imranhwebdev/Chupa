@@ -9,7 +9,7 @@ import commentLeft from "../assets/img/comment-left.png";
 import commentRight from "../assets/img/comment-right.png";
 import heroBottomRightImg from "../assets/img/heroBottomRightImg.png";
 import CopyToClipboard from './CopyToClipboard';
-import tokenomicsTopImg from '../assets/img/tokenContentImg.png';
+import tokenomicsTopImg from '../assets/img/lp.jpg';
 import close from '../assets/img/close.png';
 import PopupGallery from './PopupGallery';
 import Gallery from './Gallery';
